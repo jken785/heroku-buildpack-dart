@@ -107,8 +107,8 @@ for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cach
     done
 done
 
+# Added to manually activate local aqueduct source code
 /app/dart-sdk/bin/pub global activate --source path $BUILD_DIR/aqueduct-4.0.0-b1
-message "*** Activated aqueduct"
 
 # I think heroku deletes all the contents of /app and replaces it with
 # whatever is in $BUILD_DIR, so copy over the pub-cache. Why not put it in
