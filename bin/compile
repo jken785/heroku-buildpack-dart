@@ -105,6 +105,9 @@ for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cach
         PACKAGE_ELEMENTS=(${package//@/ })
         /app/dart-sdk/bin/pub global activate "${PACKAGE_ELEMENTS[0]}" "${PACKAGE_ELEMENTS[1]}"
     done
+    
+    # Jake added
+    /app/dart-sdk/bin/pub global activate --source path /app/aqueduct-4.0.0-b1
 done
 
 # I think heroku deletes all the contents of /app and replaces it with
