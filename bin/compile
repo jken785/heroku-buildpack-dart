@@ -106,11 +106,13 @@ for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cach
         /app/dart-sdk/bin/pub global activate "${PACKAGE_ELEMENTS[0]}" "${PACKAGE_ELEMENTS[1]}"
     done
     
-    # Jake added
-    message "Attempting to activate aqueduct"
-    /app/dart-sdk/bin/pub global activate --source path /app/aqueduct-4.0.0-b1
-    message "Activated aqueduct"
+    
 done
+
+# Jake added
+message "Attempting to activate aqueduct"
+/app/dart-sdk/bin/pub global activate --source path /app/aqueduct-4.0.0-b1
+message "Activated aqueduct"
 
 # I think heroku deletes all the contents of /app and replaces it with
 # whatever is in $BUILD_DIR, so copy over the pub-cache. Why not put it in
