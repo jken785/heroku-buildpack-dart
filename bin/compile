@@ -107,6 +107,9 @@ for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cach
     done
 done
 
+message `ls -l $BUILD_DIR`
+message `ls -l $BUILD_DIR/aqueduct-4.0.0-b1`
+
 # Jake added
 message "Attempting to activate aqueduct"
 /app/dart-sdk/bin/pub global activate --source path /app/aqueduct-4.0.0-b1
